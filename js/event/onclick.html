@@ -1,0 +1,27 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Title</title>
+        <meta name="description" content="page">
+        <meta name="keywords" content="system engineer,full stack developer"> 
+    </head>
+    
+    <body>
+        <h1> My First Heading</h1>
+        <p>My Firat paragraph</p>
+        <div id="demo"></div>
+        <button onclick="document.getElementById('demo').innerHTML = Date()">What Time Is It?</button>
+        <button onclick="showdate('demo')";>What Time is it?</button>
+        <button id="time">What time is it?</button>
+<script>
+    function showdate(element){
+        document.getElementById(element).innerHTML = Date();
+    }
+    var btn = document.getElementById("time");
+    btn.addEventListener("click", function(){
+        showdate('demo');
+    });
+</script>
+    </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Title</title>
+        <meta name="description" content="if_else page">
+        <meta name="keywords" content="system engineer,full stack developer"> 
+    </head>
+    <body>
+
+<script>
+var color = null;
+var GET = {};
+
+//parse the GET params out of the URL
+if(document.location.toString().indexOf('?') !== -1) {
+    var query = document.location
+       .toString()
+       // get the query string
+       .replace(/^.*?\?/, '')
+       // and remove any existing hash string (thanks, @vrijdenker)
+       .replace(/#.*$/, '')
+       .split('&');
+
+    for(var i=0, l=query.length; i<l; i++) {
+       var aux = decodeURIComponent(query[i]).split('=');
+       GET[aux[0]] = aux[1];
+    }
+}
+
+//Check for get parameters
+if(GET['color'] !== 'undefined'){
+    color = `#${GET['color']}`;
+}
+
+switch (color) {
+  case '#ff9900':
+    label = "red";
+    break;
+  case '#00ff00':
+    label = "green";
+    break;
+  case '#0000ff':
+    label = "blue";
+    break;
+  case '#fff000':
+    label = "yellow"
+    break;
+  default:
+    label = "unknown";
+    break;
+}
+                                      
+//Output the data
+document.write(`<div style="color:${color}"><h1>The color is ${label}</h1></div>`);
+</script>
+    </body>
+</html>

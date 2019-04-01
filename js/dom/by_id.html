@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>by_id</title>
+        <meta name="description" content="by_id page">
+        <meta name="keywords" content="system engineer,full stack developer"> 
+    </head>
+    
+    <body>
+        <p id='a'>Using the development console. Press [f12] and click the console tab. with id tag</p>
+        <div id="MyText">
+
+        </div>
+        <p id='b'>Using the development console. Press [f12] and click the console tab. with Id tag</p>
+        <p class='c'>Using the development console. Press [f12] and click the console tab. with Class tag</p>
+        <p name='d'>Using the development console. Press [f12] and click the console tab. with Name tag</p>
+<script>
+var elem = document.getElementById("a"); // Get the elements
+elem.style = 'color: #FF0000;'; // change color to red
+var list = document.getElementsByTagName('p'); // get all p elements
+list[1].style = 'color: #0000FF;';
+var classname = document.getElementsByClassName("c")
+classname[0].style = 'color: #00ff00;font-weight: bold';
+var nameofIt = document.getElementsByName('d');
+//for (var i=0; i<nameofIt.length; i++) {
+//nameofIt[i].style = 'color: #FF0000;font-weight: bold';
+//}
+nameofIt[0].style = 'color: #00ff;font-weight: bold';
+</script>
+    </body>
+</html>

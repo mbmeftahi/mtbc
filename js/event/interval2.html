@@ -1,0 +1,35 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>interval</title>
+        <meta name="description" content="JS interval">
+        <meta name="keywords" content="system engineer,full stack developer"> 
+        <style>
+            div{
+                background-color: blueviolet;
+                height: 200px;
+                width: 0px;
+            }
+                </style>
+    </head>
+<body>
+
+
+    <div id="demo"></div>
+    
+
+    <script>
+    setInterval(changeDivSize, 10);
+    var div = document.getElementById("demo"); 
+    var str = "px"
+    var num = 0;
+    function changeDivSize(){
+      div.style.width = num+str;
+      num ++;
+    }
+  
+    </script>
+    
+</body>
+</html>
