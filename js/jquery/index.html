@@ -1,0 +1,24 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Title</title>
+        <meta name="description" content="page">
+        <meta name="keywords" content="system engineer,full stack developer">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    
+    <body>
+        <p class="colorChanger" id="red">Hello World!.</p>
+        <p class="colorChanger" id="green">Hello Good Morning!.</p>
+        <p class="colorChanger" id="blue">hello Good Afternoon!.<p>
+<script>
+    $(".colorChanger").on("click" , function(event){
+        $('p').attr('style', 'font-weight: bold');
+        $('#red').attr('style', 'color: #ff0000');
+        $('#green').attr('style', 'color: #00ff00');
+        $('#blue').attr('style', 'color: #0000ff');
+    });
+</script>
+    </body>
+</html>
